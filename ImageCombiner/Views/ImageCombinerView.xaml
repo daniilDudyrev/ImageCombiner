@@ -1,0 +1,39 @@
+﻿<Window x:Class="ImageCombiner.Views.ImageCombinerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ImageCombiner" Height="450" Width="800"
+        Background="DimGray">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Button Content="Select Image" Grid.Row="0" Grid.Column="0" Command="{Binding SelectImageCommand}" FontSize="16" Foreground="White" Background="SeaGreen"></Button>
+        <Button Content="Merge" Grid.Row="0" Grid.Column="1" Command="{Binding MergeImageCommand}" FontSize="16" Foreground="White" Background="SeaGreen"></Button>
+        <TextBlock Text="Horizontal images" Grid.Row="0" Grid.Column="2" FontWeight="DemiBold" Foreground="White" 
+                   FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
+        <Slider Minimum="0" Maximum="64" x:Name="countOfHorizontal" Grid.Row="0" Grid.Column="3" ValueChanged="countOfHorizontal_ValueChanged"
+                VerticalAlignment="Center"></Slider>
+        <TextBlock x:Name="textBlockHorizontal" Grid.Row="1" Grid.Column="3" FontWeight="DemiBold" Foreground="White"
+                   FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16"></TextBlock>
+        <TextBlock Text="Vertical images" Grid.Row="2" Grid.Column="2" FontWeight="DemiBold" Foreground="White" 
+                   FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></TextBlock>
+        <Slider Minimum="0" Maximum="64" x:Name="countOfVertical" Grid.Row="2" Grid.Column="3" ValueChanged="countOfVertical_ValueChanged"
+                VerticalAlignment="Center"></Slider>
+        <TextBlock x:Name="textBlockVertical" Grid.Row="3" Grid.Column="3" FontWeight="DemiBold" Foreground="White"
+                   FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16"></TextBlock>
+    </Grid>
+</Window>
