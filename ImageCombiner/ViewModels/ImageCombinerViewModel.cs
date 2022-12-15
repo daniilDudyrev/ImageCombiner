@@ -69,39 +69,6 @@ namespace ImageCombiner.ViewModels
             var drawingVisual = new DrawingVisual();
             using (DrawingContext drawingContext = drawingVisual.RenderOpen())
             {
-                /*foreach (var frame in _bitmapFrames)
-                {
-                    if (i <= _sliderValueHorizontal)
-                    {
-                        drawingContext.DrawImage(frame, new Rect(startWidth, 0, _imageWidth, _imageHeight));
-                        startWidth += _imageWidth;
-                        if (i == _sliderValueHorizontal)
-                            startWidth = 0;
-                    }
-                    if (i > _sliderValueHorizontal && i <= _sliderValueHorizontal * 2)
-                    {
-                        drawingContext.DrawImage(frame, new Rect(startWidth, _imageHeight, _imageWidth, _imageHeight));
-                        startWidth += _imageWidth;
-                        if (i == _sliderValueHorizontal * 2)
-                            startWidth = 0;
-                    }
-                    if (i > _sliderValueHorizontal * 2 && i <= _sliderValueHorizontal * 3)
-                    {
-                        drawingContext.DrawImage(frame, new Rect(startWidth, _imageHeight * 2, _imageWidth, _imageHeight));
-                        startWidth += _imageWidth;
-                        if (i == _sliderValueHorizontal * 3)
-                            startWidth = 0;
-                    }
-                    if (i > _sliderValueHorizontal * 3)
-                    {
-                        drawingContext.DrawImage(frame, new Rect(startWidth, _imageHeight * 3, _imageWidth, _imageHeight));
-                        startWidth += _imageWidth;
-                        if (i == _sliderValueHorizontal * 3)
-                            return;
-                    }
-                    i++;
-                }*/
-
                 int l;
                 for (var j=0;j< _bitmapFrames.Count;)
                 {
